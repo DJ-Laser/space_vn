@@ -248,7 +248,7 @@ define gui.file_slot_rows = 2
 
 ## The position of the left side of the navigation buttons, relative to the
 ## left side of the screen.
-define gui.navigation_xpos = 60
+define gui.navigation_xpos = 45
 
 ## The vertical position of the skip indicator.
 define gui.skip_ypos = 15
@@ -284,10 +284,10 @@ define gui.main_menu_text_xalign = 1.0
 ## components when an overlay or window is not present.
 
 ## Generic frames.
-define gui.frame_borders = Borders(6, 6, 6, 6)
+define gui.frame_borders = Borders(24, 24, 8, 8, pad_right=16, pad_left=16)
 
 ## The frame that is used as part of the confirm screen.
-define gui.confirm_frame_borders = Borders(60, 60, 60, 60)
+define gui.confirm_frame_padding = Borders(56, 56, 56, 56)
 
 ## The frame that is used as part of the skip screen.
 define gui.skip_frame_borders = Borders(24, 8, 75, 8)
@@ -296,7 +296,7 @@ define gui.skip_frame_borders = Borders(24, 8, 75, 8)
 define gui.notify_frame_borders = Borders(24, 8, 60, 8)
 
 ## Should frame backgrounds be tiled?
-define gui.frame_tile = False
+define gui.frame_tile = True
 
 
 ## Bars, Scrollbars, and Sliders ###############################################
