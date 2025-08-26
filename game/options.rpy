@@ -33,6 +33,9 @@ define gui.about = _p("""
 Created by DJ_Laser
 
 Code and art are free to use under the MIT license.
+
+Font credit:
+BoldPixels by YukiPixels: https://yukipixels.itch.io/boldpixels
 """)
 
 
