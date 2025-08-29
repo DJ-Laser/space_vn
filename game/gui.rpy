@@ -204,13 +204,14 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ##
 ## Choice buttons are used in the in-game menus.
 
-define gui.choice_button_width = 1185
+define gui.choice_button_width = 1114
 define gui.choice_button_height = None
-define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(150, 8, 150, 8)
+define gui.choice_button_tile = True
+define gui.choice_button_borders = Borders(24, 24, 16, 16, pad_right=16, pad_left=16)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
+define gui.choice_button_text_yoffset = -2
 define gui.choice_button_text_idle_color = '#888888'
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = '#8888887f'
@@ -285,7 +286,7 @@ define gui.main_menu_text_xalign = 1.0
 ## components when an overlay or window is not present.
 
 ## Generic frames.
-define gui.frame_borders = Borders(24, 24, 8, 8, pad_right=16, pad_left=16)
+define gui.frame_borders = Borders(24, 24, 16, 16, pad_right=8, pad_left=8)
 
 ## The frame that is used as part of the confirm screen.
 define gui.confirm_frame_padding = Borders(56, 56, 56, 56)

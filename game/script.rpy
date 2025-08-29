@@ -22,4 +22,29 @@ label start:
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
-    return
+
+menu:
+
+    "Option 1":
+        jump opt_1
+
+    "Option 2":
+        jump opt_2
+
+    "Option 2 but lots of long text overflowing one line haha. <Insert bee movie script or smth>. Third line for testing":
+        jump opt_2
+
+label opt_1:
+
+    "You chose option 1"
+
+    jump c
+
+label book:
+
+    "You chose option 2"
+
+    jump c
+
+label c:
+    "Filler text"
