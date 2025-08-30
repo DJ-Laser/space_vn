@@ -1,57 +1,56 @@
-# The script of the game goes in this file.
+default persistent.seen_intro = False
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+label splashscreen:
+  if persistent.seen_intro:
+    return
 
-define e = Character("Eileen")
+  define d = Character("DJ_Laser (author)")
+  scene bg space
 
-# The game starts here.
+  d "Thanks for trying my game!"
 
-label start:
-    scene bg main
+  d "It's kind of a work in progress at the moment."
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+  d "I only have bare code and UI art right now..."
 
-    show eileen happy
+  $ renpy.notify("But hey doesn't this notification thing look cool?\nIt even tiles properly on multiple lines.")
 
-    # These display lines of dialogue.
+  d "Oh look, a notification! ^^^"
 
-    e "You've created a new Ren'Py game."
+  d "I also added choice menu UIs"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    $ renpy.notify("Hello from notification!")
-
-    pause
-
-    $ renpy.notify("REALLY long notification to make sure vertical wrapping/tiling works correctly lmao. Actually idk if it does wrap but I'm gonna find out")
-
-    pause
-
-menu:
-
+  menu:
     "Option 1":
-        jump opt_1
+      jump .opt_1
 
     "Option 2":
-        jump opt_2
+      jump .opt_2
 
-    "Option 2 but lots of long text overflowing one line haha. <Insert bee movie script or smth>. Third line for testing":
-        jump opt_2
+    "Option 3 has lots of long text overflowing onto two lines.\nThird line for testing":
+      jump .opt_3
 
-label opt_1:
-
+  label .opt_1:
     "You chose option 1"
+    jump .after_opt_123
 
-    jump c
-
-label opt_2:
-
+  label .opt_2:
     "You chose option 2"
+    jump .after_opt_123
 
-    jump c
+  label .opt_3:
+    "You chose option 3"
+    jump .after_opt_123
 
-label c:
-    "Filler text"
+  label .after_opt_123:
+    d "Lastly I customized the main menu, notably the Save/Load screens"
+    d "This was somewhat annoying to pull off because renpy doesn't like sticking to \
+      nice pixel grids, so I had to scale the art up by 8 and account for that in \
+      things like border calculations."
+    
+    d "With that out of the way, go play the game!"
+
+    $ persistent.seen_intro = True
+    $ renpy.full_restart()
+
+label start:
+  "Todo!"
