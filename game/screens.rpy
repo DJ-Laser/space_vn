@@ -646,10 +646,12 @@ screen file_slots(title):
                             yoffset gui.slot_button_image_crop[1]
                             xalign 0.5
 
+                        null height gui.slot_button_extra_spacing
+
                         text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                             style "slot_time_text"
 
-                        text FileSaveName(slot, "WHEEE"):
+                        text FileSaveName(slot):
                             style "slot_name_text"
 
                         key "save_delete" action FileDelete(slot)
