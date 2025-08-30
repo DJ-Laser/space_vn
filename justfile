@@ -12,4 +12,6 @@ export-art:
 
   aseprite -b art/textbox.aseprite --scale 8 --save-as game/gui/textbox.png
   aseprite -b art/frame.aseprite --scale 8 --save-as game/gui/frame.png
+
   aseprite -b art/skip.aseprite --scale 8 --save-as game/gui/skip.png
+  aseprite -b art/notify.aseprite --scale 8 --save-as game/gui/notify.png

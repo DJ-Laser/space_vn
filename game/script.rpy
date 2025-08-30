@@ -22,6 +22,13 @@ label start:
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
+    $ renpy.notify("Hello from notification!")
+
+    pause
+
+    $ renpy.notify("REALLY long notification to make sure vertical wrapping/tiling works correctly lmao. Actually idk if it does wrap but I'm gonna find out")
+
+    pause
 
 menu:
 
