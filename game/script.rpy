@@ -47,7 +47,7 @@ label opt_1:
 
     jump c
 
-label book:
+label opt_2:
 
     "You chose option 2"
 
